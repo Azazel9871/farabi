@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Farabi</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono|Source+Serif+Pro|Space+Mono"/>
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <header>
+            <nav class="bar" id="mainNavigation">
+
+                <ul>
+                    <li id="logo" ><a href="../index.html"><img src="../img/Farabi.svg" alt="Logo of Farabi"></a></li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a class="menuItem " href="result.html">Matches</a>
+                    </li>
+
+                    <li>
+                        <a class="menuItem menuItemActive" href="profile.html">Profile</a>
+                    </li>
+
+                    <li>
+                        <a class="menuItem" href="login.html">Log Out</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <main id="mainContent" class="registerBackground">
+            <h1 class="loginHeading registerHeading">Profile</h1>
+            <div class="colParent">
+                <div class="col1">
+                    <p class="emphasiseText emphasiseTextpara">Personal Information</p>
+                    <form>
+                        <ul class="registerSection">
+                            <li>
+                                <input id="firstNameField" type="text" placeholder="First Name" required
+                                       onblur="firstNameValidation()">
+                                <input id="lastNameField" type="text" placeholder="Last Name" required
+                                        onblur="lastNameValidation()">
+                            </li>
+
+                            <li>
+                                <div class="genderContainer">
+                                    <div class="radio">
+                                        <input id="male" name="radio" type="radio" checked>
+                                        <label for="male" class="radio-label">Male</label>
+
+                                        <input id="female" name="radio" type="radio">
+                                        <label  for="female" class="radio-label">Female</label>
+
+                                        <input id="other" name="radio" type="radio">
+                                        <label for="other" class="radio-label">Other</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="formList">
+                                <input id="ageField" type="text" placeholder="Age" required onblur="ageValidation()">
+                            </li>
+                        </ul>
+                    </form>
+
+                    <p class="emphasiseText emphasiseTextpara">University and Course Information</p>
+                    <form>
+                        <ul class="registerSection">
+                            <li>
+                                <div class="genderContainer">
+                                    <div class="radio">
+                                        <div>
+                                            <input id="uwa" name="uniradio" type="radio" checked>
+                                            <label for="uwa" class="radio-label">UWA</label>
+
+                                            <input id="curtin" name="uniradio" type="radio" disabled>
+                                            <label for="curtin" class="radio-label">CURTIN</label>
+
+                                            <input id="ecu" name="uniradio" type="radio" disabled>
+                                            <label for="ecu" class="radio-label">ECU</label>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <input id="murdoch" name="uniradio" type="radio" disabled>
+                                            <label for="murdoch" class="radio-label">MURDOCH</label>
+
+                                            <input id="unda" name="uniradio" type="radio" disabled>
+                                            <label for="unda" class="radio-label">UNDA</label>
+
+                                            <input id="uniother" name="uniradio" type="radio" disabled>
+                                            <label for="uniother" class="radio-label">Other</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <select name="majors" class="fullSizeField">
+                                    <option value="Bachelor of Science">Bachelor of Science</option>
+                                    <option value="Bachelor of Arts">Bachelor of Arts</option>
+                                    <option value="Bachelor of Design">Bachelor of Design</option>
+                                    <option value="Bachelor of Commerce">Bachelor of Commerce</option>
+                                </select>
+                            </li>
+                            <li class="formList">
+                                <input type="text" placeholder="Major">
+                            </li>
+                            <li>
+                                <div class="genderContainer">
+                                    <div class="radio oneline">
+                                        <p class="radio-label">Year :</p>
+                                        <div>
+                                            <input id="one" name="radio" type="radio" checked>
+                                            <label for="one" class="radio-label">1</label>
+
+                                            <input id="two" name="radio" type="radio" >
+                                            <label for="two" class="radio-label">2</label>
+
+                                            <input id="three" name="radio" type="radio" >
+                                            <label for="three" class="radio-label">3</label>
+
+                                            <input id="four" name="radio" type="radio" >
+                                            <label for="four" class="radio-label">4</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <input id="unit1" type="text" placeholder="Unit #1">
+                                <input id="unit2" type="text" placeholder="Unit #2">
+                                <br>
+                                <input id="unit3" type="text" placeholder="Unit #3">
+                                <input id="unit4" type="text" placeholder="Unit #4">
+                            </li>
+                        </ul>
+                    </form>
+
+                    <p class="emphasiseText emphasiseTextpara">Email and Misc Info</p>
+                    <form class="fullSizeField">
+                        <ul class="registerSection fullSizeField">
+                            <li class="formList">
+                                <input id="emailField" type="text" placeholder="Email Address" required
+                                    onblur="emailValidation()">
+                            </li>
+                            <li class="formList">
+                                <input id="password" type="text" placeholder="Password">
+                            </li>
+                        </ul>
+                    </form>
+                    <button id="changeInfo" class="mainButton btn-1" onclick="changeInfo()">Change Info</button>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer Bar -->
+        <footer class="bar">
+            <ul>
+                <li class="menuItem" id="modifiedDate">Modified Date
+                </li>
+
+                <li class="menuItem" id="clockbox" >
+                </li>
+            </ul>
+
+            <ul>
+                <li><a class="menuItem" href="additional.html">Additional</a></li>
+            </ul>
+        </footer>
+        <!-- Footer Bar Finished -->
+    <script src="../js/main.js"></script>
+
+    </body>
+
+</html>
